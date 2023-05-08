@@ -4,11 +4,11 @@ import io.qase.api.annotation.Step;
 import org.openqa.selenium.By;
 
 public class LandingPage extends BasePage{
-    private final By myAccount = By.xpath("//*[@id=\"widget-navbar-217834\"]/ul/li[6]/a/div/span");
+    private final By myAccount = By.linkText("My account");
 
     private final  By registerLink = By.xpath("//*[@id=\"column-right\"]/div/a[2]");
     private final By logOutLink = By.xpath("//*[@id=\"widget-navbar-217834\"]/ul/li[6]/ul/li[6]/a/div/span");
-    private final  By logInLink = By.linkText(" Login");
+    private final  By logInLink = By.linkText("Login");
     private String productName = "sony VAIO";
     private final By searchBar = By.xpath("//input [@name ='search']");
 
@@ -21,6 +21,7 @@ public MyAccountPage followLinkMyAccount(){
 }
     @Step("Register someone account test")
     public RegisterGuestPage followLinkRegister(){
+    followLinkMyAccount();
 
 click(registerLink);
 return new RegisterGuestPage();
@@ -29,9 +30,10 @@ return new RegisterGuestPage();
 
     @Step("log in with the register info")
 
-    public  logInPage followLinkToLogIn (){
+    public LogInPage followLinkToLogIn (){
+    followLinkMyAccount();
         click(logInLink);
-        return new logInPage();
+        return new LogInPage();
 
 
     }

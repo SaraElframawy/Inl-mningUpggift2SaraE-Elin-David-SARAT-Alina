@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
     private WebDriver driver;
-    public String EcommerceURL = "https://ecommerce-playground.lambdatest.io/index.php?route=common/home";
+    public String EcommerceURL = "https://ecommerce-playground.lambdatest.io/";
     protected static LandingPage landingPage;
     @BeforeClass
     public void init (){

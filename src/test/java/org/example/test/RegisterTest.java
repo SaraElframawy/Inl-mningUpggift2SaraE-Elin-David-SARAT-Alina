@@ -15,7 +15,6 @@ private RegisterGuestPage registerGuestPage;
     @QaseTitle("try to register a new member")
     public void registerNewGuest(){
      registerGuestPage = landingPage.followLinkRegister();
-
      registerGuestPage.writeFirstName();
      registerGuestPage.writeLastName();
      registerGuestPage.writeEmail();
