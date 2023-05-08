@@ -7,7 +7,7 @@ public class LandingPage extends BasePage{
     private final By myAccount = By.linkText("My account");
 
     private final  By registerLink = By.xpath("//*[@id=\"column-right\"]/div/a[2]");
-    private final By logOutLink = By.xpath("//*[@id=\"widget-navbar-217834\"]/ul/li[6]/ul/li[6]/a/div/span");
+    private final By logOutLink = By.xpath("//*[@id=\"column-right\"]/div/a[14]");
     private final  By logInLink = By.linkText("Login");
     private String productName = "sony VAIO";
     private final By searchBar = By.xpath("//input [@name ='search']");
@@ -39,13 +39,17 @@ return new RegisterGuestPage();
     }
     @Step("click on the link to log out fro the page")
     public LogOutPage followLinkToLogOut(){
+
+
         click(logOutLink);
         return new LogOutPage();
     }
+    @Step("Writing an item called sony VIO on the searching field" +
+            "")
 
-    public SonyVaioPage writeSonyFollowInTheSearchBar(){
+    public SonyVAIOPage writeSonyFollowInTheSearchBar(){
         sendKeys(searchBar,productName);
-        return new SonyVaioPage();
+        return new SonyVAIOPage();
 
 
     }

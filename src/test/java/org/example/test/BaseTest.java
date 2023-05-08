@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
-    private WebDriver driver;
+    public WebDriver driver;
     public String EcommerceURL = "https://ecommerce-playground.lambdatest.io/";
     protected static LandingPage landingPage;
     @BeforeClass

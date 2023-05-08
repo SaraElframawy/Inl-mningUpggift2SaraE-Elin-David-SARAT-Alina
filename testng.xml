@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/User/IdeaProjects/EcommerceSeleniumTest_Task2">
+        <classes>
+            <class name="org.example.test.LogInTest">
+            <methods>
+            <include name="test_login"/>
+        </methods>
+        </class>
+            <class name="org.example.test.LogOutTest">
+                <methods><include name="clickOnTheLogOutButton"/>
+                </methods></class><class name="org.example.test.MyaccountTest">
+                <methods><include name="justReachToRegister"/>
+                </methods>
+            </class>
+            <class name="org.example.test.RegisterTest">
+                <methods>
+                    <include name="registerNewGuest"/>
+                </methods>
+            </class>
+            <class name="org.example.test.SonyVAIOTest">
+                <methods>
+                    <include name="searchForSonyVAIO"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
