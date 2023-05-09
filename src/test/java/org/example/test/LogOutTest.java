@@ -1,6 +1,7 @@
 package org.example.test;
 
 import io.qase.api.annotation.QaseTitle;
+import io.qase.api.annotation.Step;
 import org.example.pages.LogInPage;
 import org.example.pages.LogOutPage;
 import org.testng.annotations.BeforeClass;
@@ -12,6 +13,7 @@ public class LogOutTest extends BaseTest{
     LogInPage logInPage;
 
     @BeforeMethod
+    @Step("Writing an email and password on the field and pressing log in")
     public void setUpLogin(){
         logInPage = landingPage.followLinkToLogIn();
         logInPage.hoverToLogInLink();

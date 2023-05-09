@@ -2,7 +2,7 @@ package org.example.pages;
 
 import io.qase.api.annotation.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -104,6 +104,7 @@ public void writeFirstNameInBuy(){
     select.selectByValue("3088");
 
     }
+    @Step("check agreement radio button")
   public void agreeTermsAndCondition(){
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(region));

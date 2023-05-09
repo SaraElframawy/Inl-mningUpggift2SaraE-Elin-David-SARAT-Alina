@@ -1,14 +1,15 @@
 package org.example.pages;
 
+import io.qase.api.annotation.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 
 public class LogInPage extends BasePage{
-    private By emailInput = By.id("input-email");
-    private By password = By.id("input-password");
-    private By loginButton = By.xpath("//*[@id=\"content\"]/div/div[2]/div/div/form/input");
+    private final By emailInput = By.id("input-email");
+    private final By password = By.id("input-password");
+    private final By loginButton = By.xpath("//*[@id=\"content\"]/div/div[2]/div/div/form/input");
     public void hoverToLogInLink(){
 
         Actions actions = new Actions(driver);
@@ -19,12 +20,15 @@ public class LogInPage extends BasePage{
 
 
     }
+    @Step("write an email")
     public void writeEmail (){
         sendKeys(emailInput,"sara.elfaramawy.93@gmail.com");
     }
+    @Step("write a password")
     public void  writePassword(){
         sendKeys(password,"SaraE");
     }
+    @Step("clicking on the log in button")
     public void loginButtonClick(){
         click(loginButton);
     }

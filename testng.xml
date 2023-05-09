@@ -10,7 +10,9 @@
         </class>
             <class name="org.example.test.LogOutTest">
                 <methods><include name="clickOnTheLogOutButton"/>
-                </methods></class><class name="org.example.test.MyaccountTest">
+                </methods>
+            </class>
+            <class name="org.example.test.MyaccountTest">
                 <methods><include name="justReachToRegister"/>
                 </methods>
             </class>

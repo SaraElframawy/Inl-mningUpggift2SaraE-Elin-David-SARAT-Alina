@@ -17,7 +17,8 @@ public class SonyVAIOTest extends BaseTest {
 
 
     @Test
-    @QaseTitle("login with valid inputs")
+    @QaseTitle("Buy the product sony VAIO and" +
+            " make sure it goes to the last page the purchase has been successful")
     public void searchForSonyVAIO(){
         sonyVAIOPage = landingPage.writeSonyFollowInTheSearchBar();
         sonyVAIOPage.clickTheSearchButton();
@@ -50,7 +51,7 @@ public class SonyVAIOTest extends BaseTest {
         TakesScreenshot screenshot =(TakesScreenshot) driver;
         File source =screenshot.getScreenshotAs(OutputType.FILE);
         File destination = new File(System.getProperty("user.dir")+
-                "/resources/screenshots/testBuyTheSonyVAIO_failed_again2.png");
+                "/resources/screenshots/testBuyTheSonyVAIO_passes_again2.png");
         try {
             FileHandler.copy(source,destination);
         } catch (IOException e) {
