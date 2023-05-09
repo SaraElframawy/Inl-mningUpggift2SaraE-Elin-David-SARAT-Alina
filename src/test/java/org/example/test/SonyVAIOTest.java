@@ -23,6 +23,23 @@ public class SonyVAIOTest extends BaseTest {
         sonyVAIOPage.clickTheSearchButton();
         sonyVAIOPage.clickOnTheItemPic();
         sonyVAIOPage.buyNowClick();
+       sonyVAIOPage.checkOutGuest();
+        sonyVAIOPage.writeFirstNameInBuy();
+        sonyVAIOPage.writeLastNameInBuy();
+        sonyVAIOPage.phoneNumberField();
+        sonyVAIOPage.emailBuy();
+        sonyVAIOPage.address1Field();
+        sonyVAIOPage.postCodeField();
+        sonyVAIOPage.cityField();
+        sonyVAIOPage.chooseCountry("Sweden");
+        sonyVAIOPage.chooseRegion();
+       sonyVAIOPage.agreeTermsAndCondition();
+        sonyVAIOPage.clickTheContinueButton();
+        sonyVAIOPage.clickConfirmButtonLastButton();
+
+
+
+
 
     }
 
@@ -33,7 +50,7 @@ public class SonyVAIOTest extends BaseTest {
         TakesScreenshot screenshot =(TakesScreenshot) driver;
         File source =screenshot.getScreenshotAs(OutputType.FILE);
         File destination = new File(System.getProperty("user.dir")+
-                "/resources/screenshots/testBuyTheSonyVAIO_passed_again2.png");
+                "/resources/screenshots/testBuyTheSonyVAIO_failed_again2.png");
         try {
             FileHandler.copy(source,destination);
         } catch (IOException e) {
