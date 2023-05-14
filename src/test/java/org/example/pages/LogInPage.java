@@ -10,6 +10,7 @@ public class LogInPage extends BasePage{
     private final By emailInput = By.id("input-email");
     private final By password = By.id("input-password");
     private final By loginButton = By.xpath("//*[@id=\"content\"]/div/div[2]/div/div/form/input");
+    @Step("Hoovering to access log in page through My account link")
     public void hoverToLogInLink(){
 
         Actions actions = new Actions(driver);

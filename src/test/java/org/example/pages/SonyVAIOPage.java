@@ -43,9 +43,11 @@ public void clickTheSearchButton(){
 
 
 }
+@Step("clicking on the item image to display the product so that can be purchased ")
 public void clickOnTheItemPic(){
     click(itemLink);
 }
+@Step("Click on the button click to buy sony VAIO")
 public void buyNowClick(){
     click(buyNowButton);
 
@@ -53,16 +55,20 @@ public void buyNowClick(){
 }
 
 
-
+@Step("Write the first name")
 public void writeFirstNameInBuy(){
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameFieldBuy));
     sendKeys(firstNameFieldBuy,"Sara");
 }
+@Step("Write the last name")
     public void writeLastNameInBuy(){
 
     sendKeys(lastName,"Elframawy");
     }
+
+
+    @Step("Click on the check out as guest radio button")
 
 
     public void checkOutGuest() {
@@ -71,22 +77,31 @@ public void writeFirstNameInBuy(){
     click(guestCheckOutRadioButton);
     }
 
+    @Step("Typing phone number of the customer")
+
     public void phoneNumberField(){
         sendKeys(phoneNumberBuy, "0764086589");
     }
+    @Step("Writing an email of the customer")
     public void emailBuy(){
     sendKeys(emailBuy,"sara.elfaramawy.93@gmail.com");
     }
 
+    @Step("writing address")
+
     public void address1Field() {
-        sendKeys(address1Field, "Testgatan 14");
+        sendKeys(address1Field, "TestStreet 14");
     }
+    @Step("Writing post code")
     public void postCodeField(){
     sendKeys(postCodeField,"16379");
     }
+
+    @Step("Writing a city ")
     public void cityField(){
     sendKeys(city,"Stockholm");
     }
+    @Step("using explicit wait to select by using selecting class and method visibleText")
     public void chooseCountry(String country1){
 
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
@@ -94,6 +109,8 @@ public void writeFirstNameInBuy(){
         Select select = new Select(find(country));
         select.selectByVisibleText(country1);
     }
+    @Step("Using explicit wait to wait for the choice " +
+            "in the selector and using selectByValue method")
     public void chooseRegion(){
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(regionChoices));
@@ -110,9 +127,12 @@ public void writeFirstNameInBuy(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(region));
     click(termsAndConditions);
     }
+    @Step("click on the continue button")
     public void clickTheContinueButton() {
         click(continueButton);
     }
+    @Step("Using once more explicit wait to wait for the page to load and look for the " +
+            "confirm order button")
     public void clickConfirmButtonLastButton(){
     WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
     wait.until(ExpectedConditions.visibilityOfElementLocated(confirmOrderBuyLastbutton));
