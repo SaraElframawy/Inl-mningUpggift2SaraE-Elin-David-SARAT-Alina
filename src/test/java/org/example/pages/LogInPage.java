@@ -10,13 +10,19 @@ public class LogInPage extends BasePage{
     private final By emailInput = By.id("input-email");
     private final By password = By.id("input-password");
     private final By loginButton = By.xpath("//*[@id=\"content\"]/div/div[2]/div/div/form/input");
+
+  private final By MyAccountLink = By.linkText("My account");
+  private final By registerLink = By.xpath("//*[@id=\"widget-navbar-217834\"]/ul/li[6]/ul/li[1]/a/div/span");
+
+
     @Step("Hoovering to access log in page through My account link")
     public void hoverToLogInLink(){
 
-        Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.linkText("My account"))).perform();
-        WebElement registerLink = driver.findElement(By.xpath("//*[@id=\"widget-navbar-217834\"]/ul/li[6]/ul/li[1]/a/div/span"));
-        registerLink.click();
+     //   Actions actions = new Actions(driver);
+     //   actions.moveToElement(driver.findElement(By.linkText("My account"))).perform();
+        hover(MyAccountLink);
+     //   WebElement registerLink = driver.findElement(By.xpath("//*[@id=\"widget-navbar-217834\"]/ul/li[6]/ul/li[1]/a/div/span"));
+      click(registerLink);
 
 
 
