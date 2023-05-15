@@ -3,6 +3,9 @@ package org.example.test;
 import io.qase.api.annotation.QaseTitle;
 import org.example.pages.LogInPage;
 import org.testng.annotations.Test;
+/**
+@author Sara Elframawy
+ */
 
 public class LogInTest extends BaseTest{
     LogInPage logInPage ;

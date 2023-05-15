@@ -4,7 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
+/**
+@author Sara Elframawy
+*/
 public class BasePage {
   public static WebDriver driver;
 
@@ -34,5 +36,6 @@ public class BasePage {
         Actions actions = new Actions(driver);
         actions.moveToElement(find(locator)).perform();
         //find is the method to produce web element
+
     }
 }
