@@ -22,9 +22,8 @@ public MyAccountPage followLinkMyAccount(){
     @Step("Register someone account test")
     public RegisterGuestPage followLinkRegister(){
     followLinkMyAccount();
-
-click(registerLink);
-return new RegisterGuestPage();
+    click(registerLink);
+    return new RegisterGuestPage();
 
     }
 

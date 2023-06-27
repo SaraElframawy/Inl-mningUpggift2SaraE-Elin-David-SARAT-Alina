@@ -10,7 +10,8 @@ public class RegisterGuestPage  extends BasePage{
   private final By telephone = By.id("input-telephone");
   private final By password = By.id("input-password");
   private final By confirmPassword = By.id("input-confirm");
-  private final By privatePolicyCheck = By.xpath("//*[@id=\"content\"]/form/div/div/div/label");
+  private final By privatePolicyCheck = By.xpath("//*[@id=\"content\"]" +
+          "/form/div/div/div/label");
   private final By submitButton = By.xpath("//input [@type ='submit']");
 
 public void writeFirstName (){
